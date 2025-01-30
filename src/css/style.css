@@ -1,1 +1,234 @@
-/* YOUR CSS HERE */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Text", sans-serif;
+}
+
+header {
+    padding: 0.7rem 2rem;
+    background-color: rgb(41, 39, 39);
+    color: aliceblue;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    background-image: url("../img/shopping.JPG");
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.wrapper h1 {
+    font-size: 3rem;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 6px 5px rgba(160, 235, 215, 0.5);
+}
+
+.main-title p {
+    position: relative;
+    top: -10%;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: aquamarine;
+    font-weight: 800;
+}
+
+#new-year {
+    text-decoration: underline;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.nav-items a {
+    font-weight: 650;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-items li:hover,
+i:hover {
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 3px 3px rgb(139, 138, 138);
+}
+
+input {
+    height: 1.3rem;
+    border-radius: 3px;
+}
+
+.search-btn {
+    width: 1.5rem;
+    height: 1.3rem;
+    border-radius: 3px;
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.featured-products {
+    color: rgb(73, 188, 150);
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.partial-line {
+    position: relative;
+    width: 350px;
+    height: 50px;
+}
+
+.category-name {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.product-items-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 350px 350px 350px 350px;
+    gap: 1.5rem;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 380px;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    box-shadow: 8px 5px rgb(192, 199, 255);
+
+}
+
+.item-img {
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+
+}
+
+.product-item h3 {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+.product-item p {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: hsl(159, 43%, 35%);
+
+}
+
+.add-cart-btn {
+    margin: 0.5rem;
+}
+
+aside {
+    position: relative;
+}
+
+.purchased-list {
+    position: fixed;
+    top: 0;
+    right: -200%;
+    background-color: rgb(236, 241, 239);
+    z-index: 9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px gray;
+}
+
+.open {
+    width: 420px;
+    top: 50px;
+    right: 0;
+}
+
+.purchased-list h3 {
+    margin: 2px;
+    font-size: 1.1rem;
+    color: rgb(239, 45, 152);
+}
+
+.cart-list li {
+    list-style-type: none;
+    font-weight: 500;
+}
+#total{
+    color: brown;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.fa-bag-shopping {
+    color: brown;
+}
+
+.add-btn,
+.delete-btn {
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color:brown;
+    color: white;
+    cursor: pointer;
+    margin-left: 2px;
+}
+.add-cart-btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    border:none;
+    background-color: rgb(170, 250, 250);
+    font-weight: 700;
+}
+.add-cart-btn:hover {
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(139, 138, 138);
+}
