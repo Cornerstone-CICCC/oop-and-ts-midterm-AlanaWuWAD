@@ -2,6 +2,7 @@ export class CartContext {
   constructor(){
     this.cart = []
     this.listeners = []
+    // this.totalItem = null
   }
 
   getCart(){

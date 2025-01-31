@@ -9,14 +9,18 @@ export class CartList extends Component {
     this.props.cartContext.subscribe(this.updateCart)
     this.productListElement = null
     this.productTotalElement = null
+
   }
 
   updateCart(cart) {
+    // this.props.cartContext.totalItem = 0
     let totalPrice = 0;
     this.state.cart = cart;
     this.productListElement.innerHTML = ``;
 
     const cartItem = this.state.cart.map((item, index) => {
+      // this.props.cartContext.totalItem += item.quantity 
+      
       totalPrice += item.price * item.quantity;
 
       return `
@@ -29,7 +33,7 @@ export class CartList extends Component {
         </li>
         `;
     }).join('');
-
+    
     this.productListElement.innerHTML = cartItem;
     this.productTotalElement.innerHTML = `<div>Total Price: $ ${totalPrice.toFixed(2)}</div>`;
 

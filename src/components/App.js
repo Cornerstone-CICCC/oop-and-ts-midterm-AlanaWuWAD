@@ -10,6 +10,7 @@ export class App extends Component {
     appContainer.innerHTML = `
       <header></header>
       <aside></aside>
+      <div class='search-results'></div>
       <div class='wrapper'>
         <main>
           <h1> Beauty Shop</h1>
@@ -26,16 +27,16 @@ export class App extends Component {
       </div>
       <footer></footer>  
     `
-
-    const header = new Header()
+    const cartContext = this.props.cartContext
+    const header = new Header({cartContext})
     appContainer.querySelector('header').appendChild(header.render())
 
-    const cartContext = this.props.cartContext
+   
     const cart = new CartList({
       cartContext
     }).render()
     const productList = new ProductList({
-      cartContext
+      cartContext,appContainer
     })
 
     appContainer.querySelector('aside').appendChild(cart)

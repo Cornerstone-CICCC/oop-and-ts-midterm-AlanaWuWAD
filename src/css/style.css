@@ -46,6 +46,7 @@ header {
 .main-title p {
     position: relative;
     top: -10%;
+    max-width: 100%;
     font-size: 2rem;
     line-height: 4rem;
     color: aquamarine;
@@ -58,6 +59,7 @@ header {
 
 .nav-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
@@ -108,19 +110,22 @@ input {
     width: 350px;
     height: 50px;
 }
-
+.category-block{
+    margin: 2rem;
+}
 .category-name {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 2rem;
+    text-shadow: 5px 3px 2px pink;
 }
 
 .product-items-container {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 350px 350px 350px 350px;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 .product-item {
@@ -231,4 +236,73 @@ aside {
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 3px 3px rgb(139, 138, 138);
+}
+.hide{
+    display: none !important; 
+}
+.search-results{
+    position: fixed;
+    top:20%;
+    left:23%;
+    display: none;
+    gap: 10px;
+    padding: 1rem;
+    width: 60%;
+    height: 50%;
+    background-color: white;
+    border: 3px solid rgb(154, 154, 154);
+    border-radius: 5px;
+    box-shadow:5px 5px rgb(155, 154, 154), -0.4em 0 .4em rgb(102, 167, 197);
+    z-index: 10;
+    overflow-y: auto;
+}
+.search-item-img{
+    width: 30px;
+    margin: 5px 10px;
+}
+.search-results-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+}
+.search-item-price{
+    color:  hsl(159, 43%, 35%);
+}
+
+@media(max-width:1300px){
+    .product-items-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media(max-width:900px){
+    header{
+        max-width: 100%;
+    }
+    .nav-items{
+        justify-content: center;
+        gap:1rem;
+    }
+    .wrapper h1 {
+        text-align: center;
+    }
+    .product-items-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .open{
+        width: 100%;
+     }
+     
+}
+@media(max-width:650px){
+    .open{
+        top:80px;
+     }
+}
+@media(max-width:400px){
+    .open{
+        top:120px;
+     }
 }
