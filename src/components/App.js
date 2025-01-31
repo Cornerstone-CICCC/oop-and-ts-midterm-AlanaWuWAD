@@ -2,6 +2,7 @@ import { Component } from "../common/Component.js";
 import { CartList } from "./CartList.js";
 import { ProductList } from "./ProductList.js";
 import { Header } from "./Header.js";
+import { Footer } from "./Footer.js";
 
 export class App extends Component {
   render() {
@@ -31,6 +32,8 @@ export class App extends Component {
     const header = new Header({cartContext})
     appContainer.querySelector('header').appendChild(header.render())
 
+    const footer = new Footer()
+    appContainer.querySelector('footer').appendChild(footer.render())
    
     const cart = new CartList({
       cartContext

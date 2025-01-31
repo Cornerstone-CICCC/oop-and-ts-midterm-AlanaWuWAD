@@ -20,7 +20,7 @@ export class ProductItem extends Component {
       <div class='item-img-container'>
       <img class='item-img' src=${this.props.product.image} alt=${this.props.product.id}>
       </div>
-      <h3>${this.props.product.title.substring(0,20)}</h3>
+      <h3>${this.props.product.title.substring(0,20)}</h3><span class='tooltip-text'>${this.props.product.title}</span>
       <p>$ ${parseFloat(this.props.product.price).toFixed(2)}</p> 
     
       <button class='add-cart-btn'>Add to Cart</button>
@@ -29,7 +29,7 @@ export class ProductItem extends Component {
       product.innerHTML = `
       <div class='item-img-container'>
       <img class='item-img' src=${this.props.product.image} alt=${this.props.product.id}></div>
-      <h3>${this.props.product.title}</h3>
+      <h3>${this.props.product.title}</h3><span class='tooltip-text'>${this.props.product.title}</span>
       <p>$ ${parseFloat(this.props.product.price).toFixed(2)}</p> 
     
       <button class='add-cart-btn'>Add to Cart</button>

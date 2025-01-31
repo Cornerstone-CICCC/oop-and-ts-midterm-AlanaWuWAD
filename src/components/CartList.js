@@ -13,14 +13,11 @@ export class CartList extends Component {
   }
 
   updateCart(cart) {
-    // this.props.cartContext.totalItem = 0
     let totalPrice = 0;
     this.state.cart = cart;
     this.productListElement.innerHTML = ``;
 
     const cartItem = this.state.cart.map((item, index) => {
-      // this.props.cartContext.totalItem += item.quantity 
-      
       totalPrice += item.price * item.quantity;
 
       return `

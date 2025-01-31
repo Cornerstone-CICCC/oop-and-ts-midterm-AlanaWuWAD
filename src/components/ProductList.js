@@ -17,9 +17,10 @@ export class ProductList extends Component {
 
     //search product
     this.props.appContainer.querySelector('.search-btn').addEventListener('click', () => {
-      searchWindow.classList.remove('hide')
-      this.searchProduct()
-      
+      if(this.props.appContainer.querySelector('input').value){
+        searchWindow.classList.remove('hide')
+        this.searchProduct()
+      }
     })
 
     const searchWindow = this.props.appContainer.querySelector('.search-results')
