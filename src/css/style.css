@@ -330,15 +330,22 @@ aside {
     .open{
         width: 100%;
      }
+    html {
+        scroll-padding-top: 80px;
+    }
      
 }
 @media(max-width:650px){
     .open{
         top:80px;
      }
+     html {
+        scroll-padding-top: 100px;
+    }
 }
 @media(max-width:400px){
     .open{
         top:120px;
      }
+     
 }
